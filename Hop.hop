@@ -1,0 +1,8 @@
+(define-service (server-date)                  ;1
+  (current-date))                              ;2
+
+(<HTML>                                        ;4
+  (<BUTTON>                                    ;5
+    :onclick ~(with-hop ($server-date)         ;6
+                  (lambda (h) (alert h)))     ;7
+      "Hello World!"))                          ;8
